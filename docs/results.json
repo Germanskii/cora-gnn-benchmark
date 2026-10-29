@@ -1,0 +1,157 @@
+{
+  "environment": {
+    "date": "2026-10-29",
+    "os": "Windows",
+    "python": "3.12.10",
+    "device": "cpu",
+    "processor": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+    "OMP_NUM_THREADS": 2,
+    "MKL_NUM_THREADS": 2,
+    "concurrent_experiments": true
+  },
+  "command": "python -m src.benchmark",
+  "settings": {
+    "max_epochs": 200,
+    "patience": 30,
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "split": "Planetoid public masks; transductive"
+  },
+  "summary": {
+    "GCN": {
+      "test_accuracy": {
+        "mean": 0.8056666666666666,
+        "sample_std": 0.011547005383792462
+      },
+      "test_f1_macro": {
+        "mean": 0.8000013149545858,
+        "sample_std": 0.011220902876013098
+      }
+    },
+    "GAT": {
+      "test_accuracy": {
+        "mean": 0.794,
+        "sample_std": 0.012288205727444518
+      },
+      "test_f1_macro": {
+        "mean": 0.789589439184576,
+        "sample_std": 0.009923041204587141
+      }
+    },
+    "GraphTransformer": {
+      "test_accuracy": {
+        "mean": 0.7473333333333333,
+        "sample_std": 0.0045092497528228985
+      },
+      "test_f1_macro": {
+        "mean": 0.7401080318327707,
+        "sample_std": 0.008037755437839772
+      }
+    }
+  },
+  "runs": [
+    {
+      "model": "GCN",
+      "seed": 42,
+      "val_accuracy": 0.7900000214576721,
+      "test_accuracy": 0.799,
+      "test_f1_macro": 0.7913784781974885,
+      "parameters": 92231,
+      "train_seconds": 1.0851063000154682,
+      "epochs": 43
+    },
+    {
+      "model": "GAT",
+      "seed": 42,
+      "val_accuracy": 0.7979999780654907,
+      "test_accuracy": 0.803,
+      "test_f1_macro": 0.7964378195581522,
+      "parameters": 92373,
+      "train_seconds": 1.7137838000198826,
+      "epochs": 40
+    },
+    {
+      "model": "GraphTransformer",
+      "seed": 42,
+      "val_accuracy": 0.7379999756813049,
+      "test_accuracy": 0.743,
+      "test_f1_macro": 0.7310620756535512,
+      "parameters": 369052,
+      "train_seconds": 5.329337299976032,
+      "epochs": 71
+    },
+    {
+      "model": "GCN",
+      "seed": 43,
+      "val_accuracy": 0.7960000038146973,
+      "test_accuracy": 0.819,
+      "test_f1_macro": 0.8126879154832884,
+      "parameters": 92231,
+      "train_seconds": 1.1815757000003941,
+      "epochs": 48
+    },
+    {
+      "model": "GAT",
+      "seed": 43,
+      "val_accuracy": 0.7680000066757202,
+      "test_accuracy": 0.78,
+      "test_f1_macro": 0.7782096527635609,
+      "parameters": 92373,
+      "train_seconds": 1.6013892000191845,
+      "epochs": 36
+    },
+    {
+      "model": "GraphTransformer",
+      "seed": 43,
+      "val_accuracy": 0.7379999756813049,
+      "test_accuracy": 0.747,
+      "test_f1_macro": 0.7428328108006891,
+      "parameters": 369052,
+      "train_seconds": 5.867928299994674,
+      "epochs": 79
+    },
+    {
+      "model": "GCN",
+      "seed": 44,
+      "val_accuracy": 0.7979999780654907,
+      "test_accuracy": 0.799,
+      "test_f1_macro": 0.7959375511829805,
+      "parameters": 92231,
+      "train_seconds": 1.0363983000279404,
+      "epochs": 41
+    },
+    {
+      "model": "GAT",
+      "seed": 44,
+      "val_accuracy": 0.7900000214576721,
+      "test_accuracy": 0.799,
+      "test_f1_macro": 0.7941208452320149,
+      "parameters": 92373,
+      "train_seconds": 1.552453200041782,
+      "epochs": 35
+    },
+    {
+      "model": "GraphTransformer",
+      "seed": 44,
+      "val_accuracy": 0.75,
+      "test_accuracy": 0.752,
+      "test_f1_macro": 0.7464292090440721,
+      "parameters": 369052,
+      "train_seconds": 6.251032300002407,
+      "epochs": 73
+    }
+  ],
+  "data_fingerprints": {
+    "ind.cora.allx": "9419ba2f26f5c35243db64aba110e0f35a04851609e0dc5433450676ca6b8543",
+    "ind.cora.ally": "2b998f5cc7fedc86e7f97ca2498f47a1ffc1462c29e2d578b23bf3f62b6e7d71",
+    "ind.cora.graph": "58f13302f39dde8852dad6fe6d15b89b077b6d7f837626bce671ef80344b383d",
+    "ind.cora.test.index": "297ce89af2b51a6a194181c7dbe1796c6a1cf9cd9349a88383b1b1e227867875",
+    "ind.cora.tx": "b9afbaa4a400df991f6f02ef677e1e44da55ffc04801fd02f9e673987829226a",
+    "ind.cora.ty": "41f5ac76596a1699cc33f53084a2419e92961c42bb75f36fc38e616d348532ad",
+    "ind.cora.x": "23cfa55d91c6f624233f5eb7b6e3f141f1bd2b2ae39608a63cf5d084bb27baab",
+    "ind.cora.y": "94465c14eb53e04ca262198dcbb2521ee8af60fb3f3d546cd6ca24a511b0e7d1"
+  }
+}
